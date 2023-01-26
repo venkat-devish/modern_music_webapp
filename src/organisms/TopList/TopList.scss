@@ -1,0 +1,72 @@
+.toplist {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  //   &:hover {
+  //     .active {
+  //       display: flex;
+  //     }
+  //   }
+
+  &__thumb {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.2);
+      .active {
+        display: flex;
+      }
+    }
+
+    img {
+      height: 85px;
+      width: 90px;
+    }
+
+    h4 {
+      font-family: var(--font-family);
+      color: var(--font-primary);
+    }
+  }
+
+  &__button {
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+    .active {
+      display: none;
+    }
+
+    button {
+      border-radius: 50%;
+      border: none;
+      background-color: rgb(78, 189, 78);
+      cursor: pointer;
+    }
+
+    button svg {
+      height: 55px;
+      width: 60px;
+      color: var(--font-primary);
+    }
+  }
+}

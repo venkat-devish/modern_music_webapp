@@ -9,8 +9,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { playlists } from "../../constants/sidebar_constants";
 
-playlists.map((el) => console.log(el));
-
 const SideBar = () => {
   return (
     <div className="sidebar__container">

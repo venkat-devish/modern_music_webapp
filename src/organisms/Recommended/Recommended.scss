@@ -1,0 +1,11 @@
+.recommended {
+  &__container {
+    padding: 0 1.5rem;
+
+    h1 {
+      font-family: var(--font-family);
+      font-weight: 800;
+      color: var(--font-primary);
+    }
+  }
+}

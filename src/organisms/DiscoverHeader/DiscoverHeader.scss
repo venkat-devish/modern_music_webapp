@@ -1,0 +1,45 @@
+.discover-header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+    span {
+      color: var(--font-primary);
+
+      svg {
+        font-size: 30px;
+        background-color: var(--black-background);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 3rem 0 0;
+    color: white;
+    cursor: pointer;
+
+    img {
+      height: 6%;
+      width: 6%;
+    }
+
+    p {
+      font-family: var(--font-family);
+      color: var(--font-primary);
+      font-weight: 700;
+    }
+  }
+}

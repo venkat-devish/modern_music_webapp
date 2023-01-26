@@ -1,9 +1,10 @@
 import "./App.scss";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <h1>Music Player</h1>
+      <Layout />
     </div>
   );
 }

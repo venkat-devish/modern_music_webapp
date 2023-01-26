@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  height: 100vh;
+
+  &__sidebar {
+    background-color: #000;
+    flex: 0.2;
+    height: 100vh;
+  }
+
+  &__discover {
+    background-color: #121212;
+    flex: 1;
+    height: 100vh;
+  }
+}

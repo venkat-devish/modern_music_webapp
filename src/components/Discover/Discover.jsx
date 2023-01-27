@@ -1,4 +1,5 @@
 import React from "react";
+import TopGlobalCharts from "../charts/TopGlobalCharts";
 import DiscoverHeader from "../../organisms/DiscoverHeader/DiscoverHeader";
 import Recommended from "../../organisms/Recommended/Recommended";
 import "./Discover.scss";
@@ -9,6 +10,9 @@ const Discover = () => {
       <div className="discover__flex">
         <DiscoverHeader />
         <Recommended />
+      </div>
+      <div>
+        <TopGlobalCharts />
       </div>
     </div>
   );

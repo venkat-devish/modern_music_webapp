@@ -1,0 +1,38 @@
+.topcharts {
+  &__container {
+    padding: 1.5rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-family: var(--font-family);
+      color: var(--font-primary);
+      font-weight: 900;
+      letter-spacing: -2px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-family: var(--font-family);
+      color: var(--font-grey);
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--font-light-grey);
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}

@@ -1,8 +1,13 @@
-.discover__container {
-  background: rgb(255, 46, 0);
-  background: linear-gradient(
-    148deg,
-    rgba(255, 46, 0, 1) 0%,
-    rgba(0, 0, 0, 0.02) 100%
-  );
+.discover {
+  &__container {
+  }
+
+  &__flex {
+    background: rgb(255, 46, 0);
+    background: linear-gradient(
+      148deg,
+      rgba(255, 46, 0, 1) 0%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
+  }
 }

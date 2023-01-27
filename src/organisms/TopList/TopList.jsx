@@ -16,7 +16,7 @@ const TopList = () => {
   return (
     <div className="toplist__container">
       {recommendedData.map((el) => (
-        <div key={el} className="toplist__card">
+        <div key={el.key} className="toplist__card">
           <div className="toplist__thumb">
             <img src={el.images.coverart} alt="thumbnail" />
             <h4>{el.title}</h4>

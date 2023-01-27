@@ -13,6 +13,7 @@ export const fetchSongsRecommendations = createAsyncThunk(
 const initialState = {
   isLoading: false,
   recommendations: [],
+  thumbnails: [],
   error: null,
 };
 
@@ -26,11 +27,17 @@ const recommendationsSlice = createSlice({
       })
       .addCase(fetchSongsRecommendations.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.recommendations = action.payload;
+        state.recommendations = action.payload.tracks
+          .map((el) => el)
+          .slice(10, 16);
+        state.thumbnails = action.payload.tracks
+          .map((el) => el.images.coverart)
+          .slice(10, 16);
       })
       .addCase(fetchSongsRecommendations.rejected, (state, action) => {
         state.isLoading = false;
         state.recommendations = [];
+        state.thumbnails = [];
         state.error = action.error.message;
       });
   },
@@ -39,4 +46,6 @@ const recommendationsSlice = createSlice({
 export const isLoading = (state) => state.recommendations.isLoading;
 export const recommendationsList = (state) =>
   state.recommendations.recommendations;
+export const recommendedThumbnails = (state) =>
+  state.recommendations.thumbnails;
 export default recommendationsSlice.reducer;

@@ -4,11 +4,13 @@
 
   &__sidebar {
     background-color: #000;
+    max-width: 220px;
     flex: 0.2;
   }
 
   &__discover {
     background-color: #121212;
+    overflow: hidden;
     flex: 1;
   }
 }

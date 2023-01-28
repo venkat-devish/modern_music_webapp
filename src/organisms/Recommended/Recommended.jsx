@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { greet } from "../../helpers/greet";
+import { greet } from "../../helpers/dynamic_helpers";
 import { isLoading } from "../../redux/reducers/recommendationsSlice";
 import TopList from "../TopList/TopList";
+import { MetroSpinner } from "react-spinners-kit";
 import "./Recommended.scss";
 
 const Recommended = () => {
@@ -12,7 +13,13 @@ const Recommended = () => {
   return (
     <div className="recommended__container">
       <h1>{greetText}</h1>
-      {isFetching ? <p>Loading..</p> : <TopList />}
+      {isFetching ? (
+        <div className="spinner">
+          <MetroSpinner size={30} color="#1DB954" loading={isFetching} />
+        </div>
+      ) : (
+        <TopList />
+      )}
     </div>
   );
 };

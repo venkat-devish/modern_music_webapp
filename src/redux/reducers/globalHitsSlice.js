@@ -26,7 +26,7 @@ const globalHitsSlice = createSlice({
       })
       .addCase(fetchGlobalHits.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.globalHits = action.payload;
+        state.globalHits = action.payload.tracks;
       })
       .addCase(fetchGlobalHits.rejected, (state, action) => {
         state.isLoading = false;
@@ -35,4 +35,6 @@ const globalHitsSlice = createSlice({
   },
 });
 
+export const getGlobalHits = (state) => state.globalHits.globalHits;
+export const isFetching = (state) => state.globalHits.isLoading;
 export default globalHitsSlice.reducer;

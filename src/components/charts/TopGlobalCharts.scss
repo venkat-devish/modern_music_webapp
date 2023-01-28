@@ -34,5 +34,11 @@
     color: white;
     justify-content: space-between;
     gap: 2rem;
+    max-width: 1300px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
   }
 }

@@ -15,8 +15,6 @@ const TopGlobalCharts = () => {
   const isGlobalHitsLoading = useSelector(isFetching);
   const globalHitsPreviewData = useSelector(getGlocalHitsPreview);
 
-  console.log(globalHitsPreviewData);
-
   return (
     <div className="topcharts__container">
       <div className="topcharts__header">

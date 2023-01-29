@@ -7,7 +7,6 @@ import { recommendationsList } from "../../redux/features/recommendationsSlice";
 
 const TopList = () => {
   const recommendedData = useSelector(recommendationsList);
-  console.log(recommendedData);
 
   return (
     <div className="toplist__container">

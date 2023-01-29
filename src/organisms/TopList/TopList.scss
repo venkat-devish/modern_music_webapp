@@ -27,6 +27,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
 
     &:hover {
       background-color: hsla(0, 0%, 100%, 0.2);
@@ -48,9 +50,9 @@
 
   &__button {
     padding-right: 1rem;
-    display: flex;
-    align-items: center;
     transition: all 0.3s;
+    position: absolute;
+    right: 0;
 
     .active {
       display: none;

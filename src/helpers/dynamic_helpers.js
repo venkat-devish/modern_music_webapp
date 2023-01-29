@@ -12,8 +12,6 @@ export const greet = () => {
 };
 
 export const overflowDelimiter = (text, type) => {
-  console.log(text.substring(0, 7));
-
   let limitedText;
   switch (type) {
     case "title":

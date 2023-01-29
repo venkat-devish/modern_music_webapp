@@ -4,6 +4,7 @@ import { globalHitsOptions } from "../../helpers/api_headers_options";
 
 const initialState = {
   isLoading: false,
+  globalHitsPreview: [],
   globalHits: [],
   error: null,
 };
@@ -27,6 +28,7 @@ const globalHitsSlice = createSlice({
       .addCase(fetchGlobalHits.fulfilled, (state, action) => {
         state.isLoading = false;
         state.globalHits = action.payload.tracks;
+        state.globalHitsPreview = action.payload.tracks.slice(0, 6);
       })
       .addCase(fetchGlobalHits.rejected, (state, action) => {
         state.isLoading = false;
@@ -35,6 +37,8 @@ const globalHitsSlice = createSlice({
   },
 });
 
+export const getGlocalHitsPreview = (state) =>
+  state.globalHits.globalHitsPreview;
 export const getGlobalHits = (state) => state.globalHits.globalHits;
 export const isFetching = (state) => state.globalHits.isLoading;
 export default globalHitsSlice.reducer;

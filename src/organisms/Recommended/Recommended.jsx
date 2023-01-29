@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { greet } from "../../helpers/dynamic_helpers";
-import { isLoading } from "../../redux/reducers/recommendationsSlice";
+import { isLoading } from "../../redux/features/recommendationsSlice";
 import TopList from "../TopList/TopList";
 import { MetroSpinner } from "react-spinners-kit";
 import "./Recommended.scss";
 
 const Recommended = () => {
   const isFetching = useSelector(isLoading);
-  console.log(isFetching);
+
   const greetText = greet();
   return (
     <div className="recommended__container">

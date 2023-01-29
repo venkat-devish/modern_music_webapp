@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import recommendationsReducer from "./reducers/recommendationsSlice";
-import globalHitsReducer from "./reducers/globalHitsSlice";
+import recommendationsReducer from "./features/recommendationsSlice";
+import globalHitsReducer from "./features/globalHitsSlice";
 
 const store = configureStore({
   reducer: {

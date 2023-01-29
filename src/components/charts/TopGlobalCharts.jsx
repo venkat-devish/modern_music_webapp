@@ -2,16 +2,21 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { MetroSpinner } from "react-spinners-kit";
 import ChartsCard from "../../organisms/ChartsCard/ChartsCard";
+import justing from "../../assets/toplist-dummy.jpeg";
 import {
   getGlobalHits,
+  getGlocalHitsPreview,
   isFetching,
-} from "../../redux/reducers/globalHitsSlice";
+} from "../../redux/features/globalHitsSlice";
 import "./TopGlobalCharts.scss";
 
 const TopGlobalCharts = () => {
   const globalHitsData = useSelector(getGlobalHits);
   const isGlobalHitsLoading = useSelector(isFetching);
-  console.log(globalHitsData);
+  const globalHitsPreviewData = useSelector(getGlocalHitsPreview);
+
+  console.log(globalHitsPreviewData);
+
   return (
     <div className="topcharts__container">
       <div className="topcharts__header">
@@ -26,12 +31,12 @@ const TopGlobalCharts = () => {
             loading={isGlobalHitsLoading}
           />
         ) : (
-          globalHitsData.map((el) => (
+          globalHitsPreviewData.map((el) => (
             <div key={el.key}>
               <ChartsCard
                 title={el.title}
                 artist={el.subtitle}
-                thumbnail={el.images.coverarthq}
+                thumbnail={el.images ? el.images.coverarthq : justing}
               />
             </div>
           ))

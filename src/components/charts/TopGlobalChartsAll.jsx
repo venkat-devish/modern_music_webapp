@@ -5,26 +5,21 @@ import ChartsCard from "../../organisms/ChartsCard/ChartsCard";
 import justing from "../../assets/toplist-dummy.jpeg";
 import {
   getGlobalHits,
-  getGlocalHitsPreview,
   isFetching,
 } from "../../redux/features/globalHitsSlice";
-import "./TopGlobalCharts.scss";
+import "./TopGlobalChartsAll.scss";
 import { Link } from "react-router-dom";
 
-const TopGlobalCharts = () => {
+const TopGlobalChartsAll = () => {
   const globalHitsData = useSelector(getGlobalHits);
   const isGlobalHitsLoading = useSelector(isFetching);
-  const globalHitsPreviewData = useSelector(getGlocalHitsPreview);
 
   return (
-    <div className="topcharts__container">
-      <div className="topcharts__header">
+    <div className="globalCharts__container">
+      <div className="globalCharts__header">
         <h2>Charts</h2>
-        <Link to="/charts/all">
-          <p>Show All</p>
-        </Link>
       </div>
-      <div className="topcharts__flex">
+      <div className="globalCharts__flex">
         {isGlobalHitsLoading ? (
           <MetroSpinner
             size={30}
@@ -32,8 +27,8 @@ const TopGlobalCharts = () => {
             loading={isGlobalHitsLoading}
           />
         ) : (
-          globalHitsPreviewData.map((el) => (
-            <div key={el.key}>
+          globalHitsData.map((el) => (
+            <div className="globalCharts__card" key={el.key}>
               <ChartsCard
                 title={el.title}
                 artist={el.subtitle}
@@ -47,4 +42,4 @@ const TopGlobalCharts = () => {
   );
 };
 
-export default TopGlobalCharts;
+export default TopGlobalChartsAll;

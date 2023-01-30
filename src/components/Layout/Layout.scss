@@ -1,16 +1,11 @@
 .layout {
   display: flex;
-  // height: 100vh;
 
-  &__sidebar {
-    background-color: #000;
-    max-width: 220px;
-    flex: 0.2;
-  }
-
-  &__discover {
+  &__content {
     background-color: #121212;
     overflow: hidden;
+    margin-left: 220px;
+    min-height: 100vh;
     flex: 1;
   }
 }

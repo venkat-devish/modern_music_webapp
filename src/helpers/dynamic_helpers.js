@@ -15,11 +15,12 @@ export const overflowDelimiter = (text, type) => {
   let limitedText;
   switch (type) {
     case "title":
-      limitedText = text.length < 14 ? text : text.substring(0, 14) + "...";
+      limitedText = text.length < 14 ? text : text.substring(0, 12) + "...";
       break;
 
     case "cover":
-      limitedText = text.length < 14 ? text : text.substring(0, 7) + "...";
+      console.log(text);
+      limitedText = text.length < 12 ? text : text.substring(0, 7) + "...";
       break;
 
     default:

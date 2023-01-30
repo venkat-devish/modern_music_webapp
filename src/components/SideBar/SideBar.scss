@@ -1,6 +1,11 @@
 .sidebar {
   &__container {
-    min-width: 250px;
+    background-color: #000;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
   }
 
   &__logobox {

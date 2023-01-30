@@ -1,0 +1,29 @@
+.globalCharts {
+  &__container {
+    padding: 1.5rem;
+  }
+
+  &__flex {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__header {
+    color: var(--font-primary);
+    font-family: var(--font-family);
+    font-weight: 900;
+  }
+
+  &__card {
+    padding: 0.5rem;
+    width: 200px;
+
+    h2 {
+      color: var(--font-primary);
+    }
+  }
+}
+
+.chartscard__content {
+  padding: 0.5rem;
+}

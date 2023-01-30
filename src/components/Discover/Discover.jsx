@@ -13,6 +13,8 @@ const Discover = () => {
       </div>
       <div>
         <TopGlobalCharts />
+        <TopGlobalCharts />
+        <TopGlobalCharts />
       </div>
     </div>
   );
